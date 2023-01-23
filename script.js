@@ -42,3 +42,23 @@ function isDigit(input) {
   }
   return integer;
 }
+let twoOperators = function (num, operator) {
+  if (operator === "sqrt") {
+    return Math.sqrt(num);
+  } else if (operator === "*") {
+    return num * num;
+  }
+};
+console.log(twoOperators(25, "sqrt"));
+// function that determines how many parameters we get from the user according to the input
+function ArgumentsFromUserCounter(userInputArray) {
+  let numOfArgumentsFromUser = 0;
+  if (userInputArray.length === 3) {
+    numOfArgumentsFromUser = 3;
+  } else if (userInputArray.length === 2) {
+    numOfArgumentsFromUser = 2;
+  }
+  return numOfArgumentsFromUser;
+}
+console.log(ArgumentsFromUserCounter([4, "+", 5]));
+console.log(ArgumentsFromUserCounter([4, "square"]));
